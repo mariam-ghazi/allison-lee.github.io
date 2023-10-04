@@ -252,9 +252,10 @@ h3{
 #contact{
     display: inline;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 22px;
+    margin-top: 2px;
     margin-left: 15px;
-    margin-right: 5px;
+    margin-right: 10px;
 }
 
 #email{
@@ -263,9 +264,12 @@ h3{
     background-color:#FBE7C7;
     border: none;
     color: black;
+    user-select: none;
+    cursor: pointer;
+    margin-right: 10px;
 }
 
-#linkdin{
+#linkedin{
     font-family: 'STIX Two Text', serif;  
     font-size: 20px;
     background-color:#FBE7C7;
@@ -285,8 +289,8 @@ h3{
     text-decoration: underline;
 }
 
-#linkdin:hover{
-    text-decoration: underline;
+#linkedin:not(:hover){
+    text-decoration: none;
 }
 
 /*WORKS*/
@@ -302,7 +306,7 @@ h3{
     display: grid;
 }
 
-.works p{
+#works-title{
     display: flex;
     justify-content:flex-end;
     font-weight: bold;
@@ -336,6 +340,10 @@ h3{
     height: 180px;
 }
 
+.works-box:hover{
+    box-shadow: 9px 9px #f9c09f;
+}
+
 .expand-box{
     position:relative;
     background-color: white;
@@ -343,7 +351,7 @@ h3{
     border: 2px solid;
     width: 42px;
     height: 42px;
-    right: 2px;
+    
 }
 
 .expand-box:hover {
@@ -351,38 +359,75 @@ h3{
     height: 47px;
 }
 
+.box-header{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+    font-family: American-Typewriter;
+}
+
+.box-line{
+    width:258px;
+    height: 2px;
+    background-color: #111111;
+    position: absolute; 
+}
+
+.box-title{
+    font-size: 45px;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+.box-description{
+    font-family: American-Typewriter;
+    margin: 10px;
+}
+
+.expand-box{
+    left: 230px;
+}
+
+/*POP-UP BOX*/
+
+.pop-up{
+    display: none;
+}
+
+.pop-up.active {
+    margin: 0px;
+
+    display: block;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+.pop-up-box{
+    display: flex;
+    height: 100vh;
+    align-items: center; 
+    justify-content: center; /*not working*/
+    position: absolute;
+}
+
+.box-background{
+    height: 500px;
+    width: 800px;
+    background-color: #ffc3b5;
+}
 
 /*
-.container{
-    display: grid;
-    justify-self: center;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 2;
-}
+.pop-up-box{
+    height: 500px;
+    width: 300px;
+    background-color: white;
+    position: absolute;
 
-.box-row-1{
-    grid-row-start: 1;
-    grid-row-end: 2;
-}
-
-.box-col-1{
-    grid-column-start: 1;
-    grid-column-end: 2;
-}
-
-.box-row-2{
-    grid-row-start: 2;
-    grid-row-end: 3;
-}
-
-.box-col-2{
-    grid-column-start: 2;
-    grid-column-end: 3;
-}
-
-.box-col-3{
-    grid-column-start: 3;
-    grid-column-end: 4;
 }*/
+
