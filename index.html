@@ -1,7 +1,7 @@
 <!DOCTYPE html> 
 <html>
     <head>
-        <title>Allison Lee's Portfolio</title>
+        <title>Allison Lee</title>
         <link href="https://fonts.googleapis.com/css2?family=STIX+Two+Text&display=swap" rel="stylesheet">
         <link rel="stylesheet" href= "allison-portfolio.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,18 +25,19 @@
         </header>
         <main>  
             <div id="home">
-                <img src="lee.png">
+                <img src="lee.png" class="lee">
                 <p>Allison</p> 
                 <div id ="half-circle"></div>
                 <div id ="gradient-circle"></div> 
+                <img src="DownwardArrow.png" class="arrow-down">
             </div> 
             <div class="about-me">
                 <div id="about-me-grid">
                     <h1>Hello,</h1>
                     <h4>my name is</h4>
+                    <img src="allison-lee-cursive.png" class="allison-lee-cursive"> </img>
                     <p>i'm a third year mechanical engineering student 
-                                at the university of toronto. i enjoy going to the 
-                                gym and solving engineering problems... Lorem ipsum dolor sit amet consectetur
+                                at the university of toronto. Lorem ipsum dolor sit amet consectetur
                                 adipisicing elit. Fugit officia illo tenetur, velit laudantium iusto 
                                 odit dolor, rerum cupiditate distinctio dolorem quos excepturi aliquam 
                                 sequi? Enim tempore iure et delectus? Lorem ipsum dolor sit amet 
@@ -64,7 +65,7 @@
                 <div class="works">
                     <p id="works-title">Works</p>
                     <div class ="works-container">
-                        <div class ="works-box" class ="box-1"> 
+                        <div class ="works-box" class ="box-1" data-target="#modal-1"> 
                             <div class = "box-header">
                                 <div class = "header-type">club</div>
                                 <div class = "header-year">2022</div>
@@ -72,9 +73,10 @@
                             <div class = "box-line"></div>
                             <p class = "box-title">LESA</p>
                             <p class = "box-description">-Latin Engineering Student Association Member at Uoft</p>
-                            <button class ="expand-box">-></button>
+                            <button class ="expand-box">↘</button>
                         </div>
-                        <div class ="works-box" class ="box-2"> 
+                        
+                        <div class ="works-box" class ="box-2" data-target="#modal-2"> 
                             <div class = "box-header">
                                 <div class = "header-type">club</div>
                                 <div class = "header-year">2022</div>
@@ -82,58 +84,105 @@
                             <div class = "box-line"></div>
                             <p class = "box-title">LESA</p>
                             <p class = "box-description">-Latin Engineering Student Association Member at Uoft</p>
-                            <button class ="expand-box">-></button>
+                            <button class ="expand-box">↘</button>
                         </div>
                         <div class ="works-box" class ="box-3"> 
                             <div class = "box-header">
-                                <div class = "header-type">club</div>
-                                <div class = "header-year">2022</div>
+                                <div class = "header-type">project</div>
+                                <div class = "header-year">year</div>
                             </div>
                             <div class = "box-line"></div>
-                            <p class = "box-title">LESA</p>
-                            <p class = "box-description">-Latin Engineering Student Association Member at Uoft</p>
-                            <button class ="expand-box">-></button>
+                            <p class = "box-title">Title</p>
+                            <p class = "box-description">-Quibusdam doloremque repellat!</p>
+                            <button class ="expand-box">↘</button>
                         </div>
                         <div class ="works-box" class ="box-4"> 
                             <div class = "box-header">
-                                <div class = "header-type">club</div>
-                                <div class = "header-year">2022</div>
+                                <div class = "header-type">project</div>
+                                <div class = "header-year">year</div>
                             </div>
                             <div class = "box-line"></div>
-                            <p class = "box-title">LESA</p>
-                            <p class = "box-description">-Latin Engineering Student Association Member at Uoft</p>
-                            <button class ="expand-box">-></button>
+                            <p class = "box-title">Title</p>
+                            <p class = "box-description">-Quibusdam doloremque repellat!</p>
+                            <button class ="expand-box">↘</button>
                         </div>
                         <div class ="works-box" class ="box-5"> 
                             <div class = "box-header">
                                 <div class = "header-type">club</div>
-                                <div class = "header-year">2022</div>
+                                <div class = "header-year">year</div>
                             </div>
                             <div class = "box-line"></div>
-                            <p class = "box-title">LESA</p>
-                            <p class = "box-description">-Latin Engineering Student Association Member at Uoft</p>
-                            <button class ="expand-box">-></button>
+                            <p class = "box-title">Title</p>
+                            <p class = "box-description">-Quibusdam doloremque repellat!</p>
+                            <button class ="expand-box">↘</button>
                         </div>
                         <div class ="works-box" class ="box-6"> 
                             <div class = "box-header">
-                                <div class = "header-type">club</div>
-                                <div class = "header-year">2022</div>
+                                <div class = "header-type">lab</div>
+                                <div class = "header-year">year</div>
                             </div>
                             <div class = "box-line"></div>
-                            <p class = "box-title">LESA</p>
-                            <p class = "box-description">-Latin Engineering Student Association Member at Uoft</p>
-                            <button class ="expand-box">-></button>
+                            <p class = "box-title">Title</p>
+                            <p class = "box-description">-Quibusdam doloremque repellat!</p>
+                            <button class ="expand-box">↘</button>
                         </div>
                     </div>
                 </div>
             </div>  
-            <div class="pop-up">
-                <div class="pop-up-box">
-                    <div class="box-background">
-
+            <div class="pop-up-box" id="modal-1">
+                <div class="box-background">
+                    <div class = "pop-up-header">
+                        <div class = "pop-up-header-type">club</div>
+                        <div class = "pop-up-header-year">2022</div>
                     </div>
-                </div>  
-            </div>
+                    <div class="pop-up-line"></div>
+                    <p class="pop-up-title" >LESA</p>
+                    <p class = "pop-up-description"> - Member on the executive team of the Latin Engineering
+                        Student Association at Uoft.
+                    </p>
+                    <p class = "task-title">Tasks</p>
+                    <ul class ="pop-up-tasks">
+                        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                            Consequuntur illo ratione, error impedit magni asperiores architecto
+                            aut commodi qui fuga dolor nesciunt! </li>
+                        <li>Quibusdam doloremque repellat 
+                            impedit illum suscipit iure sint!</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Soluta laboriosam ea nisi architecto nobis sit dolore dolorem inventore 
+                            consectetur necessitatibus adipisci similique sapiente sed ab, in voluptas 
+                            nesciunt, ipsam et.</li>
+                    </ul>
+                    <button class = "close">↖</button>   
+                </div>
+            </div>  
+            <div class="pop-up-box" id="modal-2">
+                <div class="box-background">
+                    <div class = "pop-up-header">
+                        <div class = "pop-up-header-type">club</div>
+                        <div class = "pop-up-header-year">2022</div>
+                    </div>
+                    <div class="pop-up-line"></div>
+                    <p class="pop-up-title" >LESA</p>
+                    <p class = "pop-up-description"> - Member on the executive team of the Latin Engineering
+                        Student Association at Uoft.
+                    </p>
+                    <p class = "task-title">Tasks</p>
+                    <ul class ="pop-up-tasks">
+                        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                            Consequuntur illo ratione, error impedit magni asperiores architecto
+                            aut commodi qui fuga dolor nesciunt! </li>
+                        <li>Quibusdam doloremque repellat 
+                            impedit illum suscipit iure sint!</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Soluta laboriosam ea nisi architecto nobis sit dolore dolorem inventore 
+                            consectetur necessitatibus adipisci similique sapiente sed ab, in voluptas 
+                            nesciunt, ipsam et.</li>
+                    </ul>
+                    <button class = "close">↖</button>   
+                </div>
+            </div> 
+            <div class="overlay"></div> 
+
         </div>
         </main>  
     </body> 

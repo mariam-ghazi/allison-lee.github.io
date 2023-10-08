@@ -79,8 +79,8 @@ h3{
     display: flex;
     justify-content: center;
     align-self: center;
-    height: 100vh;
     position: relative;
+    margin-bottom: 150px;
 }
 
 #half-circle{
@@ -108,16 +108,35 @@ h3{
     font-family: 'STIX Two Text', serif;  
     font-size: 200px;
     color: #F69563;
-    margin:0px;
-    position: absolute;
     margin: 220px;
+    position: absolute;
     letter-spacing: 8px;
     z-index: -1;
 }
 
-#home > img{
+.lee{
     position: absolute;
     height: 600px;
+}
+
+.arrow-down{
+    position: relative;
+    margin-top: 700px;
+    width: auto;
+    height:40px;
+    animation: jumpInfinite 2s infinite;
+}
+
+@keyframes jumpInfinite {
+    0%{
+        top: 0px;
+    }
+    50%{
+        top: 10px;
+    }
+    100%{
+        top: 0px;
+    }
 }
 
 #buttons{
@@ -138,6 +157,7 @@ h3{
     cursor: pointer;
 }
 
+
 /*ABOUT ME*/
 
 .about-me{
@@ -157,7 +177,6 @@ h3{
     font-size: 100px;
     margin-top: 0px;
     margin-bottom: 0px;
-
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 1;
@@ -166,14 +185,27 @@ h3{
 
 #about-me-grid > h4{
     font-family: American-Typewriter;
+    position: absolute;
     font-size: 25px;
-    margin-top: 0px;
+    margin-top: 11px;
     margin-bottom: 0px;
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 2;
     grid-row-end: 3;
 }
+
+.allison-lee-cursive{
+    position: relative;
+    height: 45px;
+    margin-left: 150px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+
 #about-me-grid > p{
     margin-top: 20px;
     margin-bottom: 20px;
@@ -298,6 +330,8 @@ h3{
 .works-container-1{
     display: flex;
     justify-content: center;
+    margin-top: 80px;
+    margin-bottom: 120px;
 }
 
 .works{
@@ -357,6 +391,13 @@ h3{
 .expand-box:hover {
     width: 47px;
     height: 47px;
+    cursor: pointer;
+}
+
+.arrow-down-right{
+    height: 30px;
+    width: auto;
+    transform: rotateZ(-45deg);
 }
 
 .box-header{
@@ -390,44 +431,115 @@ h3{
 
 /*POP-UP BOX*/
 
-.pop-up{
+.overlay{
     display: none;
-}
-
-.pop-up.active {
     margin: 0px;
-
-    display: block;
     position: fixed;
     height: 100%;
     width: 100%;
-    z-index: 9999;
+    z-index: 7000;
     top: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.7);
 }
 
+.overlay.active {
+    display: block;
+}
+
 
 .pop-up-box{
-    display: flex;
-    height: 100vh;
-    align-items: center; 
-    justify-content: center; /*not working*/
-    position: absolute;
+    display: none;
+    align-items: center;
+    justify-content: center; 
+    top:0px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    z-index: 8000;
+    position: fixed;
 }
+
+.pop-up-box.active{
+    display: flex;
+}
+
 
 .box-background{
-    height: 500px;
-    width: 800px;
+    border: 2px solid;
+    height: 650px;
+    width: 1050px;
     background-color: #ffc3b5;
+    /*overflow: scroll;*/
 }
 
-/*
-.pop-up-box{
-    height: 500px;
-    width: 300px;
+.pop-up-header{
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+    font-family: "American-Typewriter", sans-serif;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.pop-up-line{
+    height: 2px;
+    width: 1048px;
+    background-color: #111111;
+    position: relative;
+}
+
+.pop-up-title{
+    position: relative;
+    text-shadow: 2px 2px rgb(255, 241, 241);
+    margin-top: 30px;
+    font-size: 150px;
+    margin-left: 40px;
+}
+
+.pop-up-description{
+    margin-left: 40px;
+    font-family: "American-Typewriter", sans-serif;
+    color: #F69563;
+    text-shadow: 1px 1px black;
+    font-size: 35px;
+}
+
+.task-title{
+    margin-left: 40px;
+    font-size: 26px;
+    margin-top: 20px;
+    text-decoration: underline;
+}
+
+.pop-up-tasks{
+    font-size: 18px;
+    margin-left: 75px;
+    margin-right: 75px;
+    margin-top:8px;
+}
+
+.pop-up-tasks li{
+    margin-bottom: 10px;
+}
+
+.close{
+    left: 1420px;
+    top: 740px;
+    width: 75px;
+    height: 75px;
+    position: fixed;
     background-color: white;
-    position: absolute;
+    display: inline-block;
+    border: 2px solid;
+    font-size: 30px;
+    font-weight: lighter;
+}
 
-}*/
-
+.close:hover {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+}

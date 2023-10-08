@@ -25,16 +25,24 @@ async function copyContent(text) {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    const worksPage = document.querySelector(".works"), 
-          expandBox = document.querySelectorAll(".expand-box"),
-          old = document.querySelector(".box-overlay"),
-          overlay = document.querySelector(".pop-up");
+    const expandBoxButton = document.querySelectorAll(".expand-box"),
+          overlay = document.querySelector(".overlay"),
+          closeButton = document.querySelectorAll(".close")
+          modal = document.querySelectorAll("[data-target]");
 
-    /*clicking any of the expandBox elements opens a popup*/
-    expandBox.forEach(function(expandBox) {
-        expandBox.addEventListener("click", () => {
-            overlay.classList.add("active");
-        });
+    modal.forEach((expandBoxButton) => {
+      expandBoxButton.addEventListener("click", (event) => {
+        event.stopPropagation();
+        document.querySelector(expandBoxButton.dataset.target).classList.add("active");
+        overlay.classList.add("active");
+      });
+    });
+    
+    closeButton.forEach((closeButton) => {
+      closeButton.addEventListener("click", () => {
+        const closestModal = closeButton.closest(".pop-up-box");
+        closestModal.classList.remove("active");
+        overlay.classList.remove("active");
+      });
     });
 });
-
